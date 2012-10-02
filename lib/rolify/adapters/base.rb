@@ -15,7 +15,7 @@ module Rolify
       end
       
       def role_table
-        @role_cname.tableize
+        @role_cname.tableize.gsub('/', '_')
       end
       
       def self.create(adapter, role_cname, user_cname)
